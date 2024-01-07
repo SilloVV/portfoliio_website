@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wassil NAKIB Portfolio</title>
+    <link rel="icon" type="image/x-icon"  href="/assets/icons/favicon.ico">
+    <script src="/js/color-mode.js" defer></script>
+    <script src="/js/project-slideshow.js" defer></script>
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    
+    
+
+    <div  id="hero">
+        <h5>Je suis</h5>
+        <h1 id="nom" >Wassil NAKIB </h1>
+        <h1 id="sillow" style="display: none;">'Sillow'</h1>
+        <p>Computer & robotics Engineering Student </p>
+        <!-- Block Element modifier-->
+        <div id="hero_animation">
+            <div id="hero__animation__img">
+            </div>
+
+        </div>
+    </div>
+
+    <div id="cvscroller" style="display: none;">
+        <div id="closeb" onclick="close_cv()">X</div>
+        <div class="cv">
+            <div class="cv-content">
+            <img src="./docs/CV.jpg" alt="img1 du cv">
+            </div>
+        </div>
+        
+    </div>
+
+
+    
+    <div id="projectwrapper" >
+        
+
+        <div class="project"style="display: none">
+            <a href="https://github.com/SilloVV/Lab2-TDDC73" target="_blank"><Text >Interface de paiement par carte bancaire (React native) </Text></a>
+            <button class="next-project" id="next-project">Suivant</button>
+            <button class="back-project" id="back-project"> Précédent</button>
+        <img class="projectimage1" src="./docs/credit1.png" alt="creditcard1">
+             
+        <img class="projectimage2" src="./docs/credit2.png" alt="creditcard2">
+
+         
+        </div>
+        <div class="project" style="display: none">
+            <a href="./docs/TIPE2022.pdf" target="_blank"><Text >TIPE 2022 (Blender , Python ,OpenCV, C++, Arduino) </Text></a>
+
+            <button class="next-project" id="next-project"> Suivant</button>
+            <button class="back-project" id="back-project"> Précédent</button>
+            <img class="projectimage3" src="./docs/tipe1.png" alt="TIPE">
+             
+            <img class="projectimage4" src="./docs/tipe2.png" alt="TIPE">
+            <img class="projectimage5" src="./docs/tipe3.png" alt="TIPE">
+        </div>
+        <div class="project" style="display: none">
+            <Text >Owasp Security Sheperd Project (Burp ,Zap) </Text>
+
+            <button class="next-project" id="next-project"> Suivant</button>
+            <button  class="back-project" id="back-project"> Précédent</button>
+            <img class="projectimage6" src="./docs/topdog.png" alt="creditcard1">
+             
+       
+        </div>
+        <div class="project" style="display: none;">
+            <Text >Github Repositories trending (GraphQL, react native) </Text>
+
+            <button  class="next-project" id="next-project"> Suivant</button>
+            <button class="back-project" id="back-project"> Précédent</button>
+            <img class="projectimage1" src="./docs/credit1.png" alt="creditcard1">
+            <img class="projectimage2" src="./docs/credit2.png" alt="creditcard2">
+        </div>
+        <div class="project" style="display: none">
+            <Text >Co-réalisation de "TIRAILLEURS" court métrage prix du coup de coeur 3is 2019 </Text>
+
+            <button class="next-project" id="next-project"> Suivant</button>
+            <button  class="back-project" id="back-project"> Précédent</button>
+            <img class="projectimage1" src="./docs/credit1.png" alt="creditcard1">
+             
+        <img class="projectimage2" src="./docs/credit2.png" alt="creditcard2">
+        </div>
+        
+        
+    </div>
+    
+    <div id="contact-section"  style="display: none;">
+        <div class="contact-content">
+            <div class="contact-me">Contact me !</div>
+            <div class="contact-icon linkedin">
+                <a href="https://www.linkedin.com/in/wassil-nakib-031361293/" target="_blank"><img src="./assets/icons/linkedin.png" alt=""></a>
+            </div>
+
+            <div class=" contact-icon github">
+                    <a href="https://github.com/SilloVV" target="_blank"><img src="./assets/icons/github.png" alt=""></a>
+            </div>
+
+            <div class="contact-icon instagram">
+                    <a href="https://www.instagram.com/_scoobidouuu" target="_blank"><img src="./assets/icons/instagram.png" alt=""></a>
+            </div>
+
+            <div class="mail">
+                wassil.nakib.pro@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <div id="about-me" style="display: none;">
+        <div class="propos"> 
+            <em>À propos de moi </em></div>
+        <p> Parlons un peu de moi ! Je suis actuellement en plein dans l'aventure de la deuxième année d'école d'ingénieur, plongé dans le passionnant univers de l'informatique, de la robotique, de l'automatique, des réseaux et de l'intelligence artificielle à Polytech Nancy. À 22 ans, c'est comme un vaste terrain de jeu pour mon esprit curieux et avide de découvertes technologiques. 
+            En dehors du monde de la tech, j'ai une passion pour la boxe qui me permet de maintenir un équilibre entre le corps et l'esprit. De plus, j'adore voyager, explorer de nouveaux horizons et m'immerger dans des cultures différentes.<br> <br>
+
+             Je suis à la recherche d'un stage, un stage qui sonne comme une expérience riche et passionnante de 14 à 17 semaines. Mon objectif ? Plonger tête la première dans le monde de l'informatique et de la data science. Je suis avide de défis, prêt à mettre en pratique mes connaissances et à étancher ma soif d'apprentissage au sein de votre entreprise.</p>
+    </div>
+
+    <div id="imga2" style="display: none;">
+        <img src="./docs/img-about4.jpg" alt="">
+    </div>
+   
+    <div id="imga1" style="display: none;">
+        <img src="./docs/img-about.JPG" alt="">
+    </div>
+
+    
+    
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <span>My Portfolio</span>
+            </div>
+            <i class="bx bx-menu" id="btn"></i>
+
+        </div>
+        <ul>
+            <li>
+                <a onclick="show_about()">
+                    <span class="nav-item"> About me</span>
+                </a>
+                
+            </li>
+            <li>
+                <a onclick="show_cv()">
+                    <span class="nav-item"> Curriculum</span>
+                </a>
+                
+            </li>
+            <li>
+                <a onclick="show_projects()">
+                    <span class="nav-item">Projects</span>
+                </a>
+                
+            </li>
+            <li>
+                <a onclick="show_contact()">
+                    <span class="nav-item">Contact</span>
+                </a>
+                
+            </li>
+        </ul>
+        
+    </div>
+
+
+
+    <div class="main-content">
+        <div class="container">
+           
+        </div>
+    </div>
+
+
+    <div id="color-mode">
+        <div id="toggle_button" class="icon">
+            
+        </div>
+    </div>
+    
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    
+    
+</body>
+
+</html>

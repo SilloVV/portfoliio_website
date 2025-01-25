@@ -106,6 +106,7 @@ h1, h2, h5, p{
 
 .sidebar.active #btn{
     left: 90%;
+    padding-right:1rem ;
     
      
 }
@@ -125,10 +126,12 @@ h1, h2, h5, p{
 }
 
 .sidebar.active .top .logo{
-    transform: translate(15Vw);
     opacity: 1;
+    position: relative;
+    left:1.5vw;
     
 }
+
 
 .top .logo i{
     font-size:2rem ;
@@ -145,8 +148,9 @@ h1, h2, h5, p{
     
 }
 
-#btn{
-    padding-right: 15px;
+
+.logo {
+    justify-content: center;
 }
 
 .sidebar ul li a{
@@ -812,16 +816,22 @@ h1, h2, h5, p{
 
 
 @media screen and (max-width:700px)  {
-    .sidebar.active .top .logo{
-        transform: translate(40Vw);
+    .logo {
+        
+        justify-content: center;
     }
+
+    .sidebar.active .top .logo{
+        left: 0;
+    }
+    
     
     .sidebar.active ul{
         padding:0;
     }
     
     .sidebar.active {
-        width: 100%;
+        width: 70%;
         height: 100%;
         top: 0;
         left: 0;

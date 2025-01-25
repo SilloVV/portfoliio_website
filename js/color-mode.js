@@ -42,15 +42,6 @@ function updateToggleButton(){
 
 
 
-function close_cv() {
-    const cv_container = document.getElementById("cv_container");
-    document.getElementById('hero').style.display='';
-
-
-    cv_container.style.display = "none";
-    
-    a = 1;
-}
 
 let btn = document.querySelector('#btn');
 let sidebar = document.querySelector(".sidebar");
@@ -107,7 +98,11 @@ document.getElementById("about_button").addEventListener("click", () => {
 document.addEventListener('DOMContentLoaded', () => {
     const sidebarLogo = document.getElementById('btn');
     const heroAnimation = document.getElementById('hero_animation');
-    const heroAnimationImg = document.getElementById('hero_animation_img');
+
+    // Définir une image de fond par défaut
+    heroAnimation.style.backgroundImage = 'var(--tl-1)';
+    heroAnimation.style.backgroundPosition = 'center';
+    heroAnimation.style.backgroundSize = 'cover';
 
     let isAnimationRunning = false;
     let originalAnimation = '';

@@ -42,32 +42,6 @@ function updateToggleButton(){
 
 
 
-var a;
-
-
-function show_cv(){
-    
-    if(a==1){
-        document.getElementById('hero').style.display='none';
-
-        document.getElementById("cv_container").style.display="";
-        document.getElementById("contact-section").style.display="none";
-        document.getElementById("about-me").style.display="none";
-        document.getElementById("projectwrapper").style.display="none";
-
-        sidebar.classList.toggle('active');
-        return a=0
-
-    }
-    else{
-        
-        document.getElementById("cv_container").style.display="none";
-        document.getElementById('hero').style.display='';
-
-        return a=1;
-    }
-}
-
 function close_cv() {
     const cv_container = document.getElementById("cv_container");
     document.getElementById('hero').style.display='';
@@ -85,71 +59,49 @@ btn.onclick = function(){
     sidebar.classList.toggle('active');
 };
 
-var b;
-function show_projects(){
-    if(b==1){
-        document.getElementById('hero').style.display='none';
-
-        document.getElementById("projectwrapper").style.display="";
-        document.getElementById("contact-section").style.display="none";
-        document.getElementById("cv_container").style.display="none";
-
-        document.getElementById("about-me").style.display="none";
-        sidebar.classList.toggle('active');
-        return b=0
-
-    }
-    else{
-        document.getElementById("projectwrapper").style.display="none";
-        document.getElementById('hero').style.display='';
-
-        return b=1;
-    }
-}
-
-var c;
-function show_contact(){
-    if(c==1){
-        document.getElementById('hero').style.display='none';
-        document.getElementById("contact-section").style.display="";
-        document.getElementById("cv_container").style.display="none";
-        document.getElementById("about-me").style.display="none";
-        document.getElementById("projectwrapper").style.display="none";
-        sidebar.classList.toggle('active');
-        return c=0
-
-    }
-    else{
-        
-        document.getElementById("contact-section").style.display="none";
-        document.getElementById('hero').style.display='';
-        return c=1;
+// Fonction générique pour gérer l'affichage des sections
+function toggleDisplaySection(sectionId) {
+    const section = document.getElementById(sectionId);
+    const hero = document.getElementById('hero');
+    const allSections = ["cv_container", "projectwrapper", "contact-section", "about-me"];
+    
+    // Vérifie si la section est déjà affichée
+    const isSectionVisible = section.style.display !== "none";
+    
+    // Masquer toutes les sections
+    allSections.forEach(id => {
+        document.getElementById(id).style.display = "none";
+    });
+    
+    // Si la section est déjà affichée, on cache la section et on montre 'hero'
+    if (isSectionVisible) {
+        hero.style.display = "";
+    } else {
+        // Sinon, on affiche la section sélectionnée et cache 'hero'
+        section.style.display = "";
+        hero.style.display = "none";
     }
 }
 
-var d;
-function show_about(){
-    if(d==1){
-        document.getElementById('hero').style.display='none';
+// Variables pour garder l'état de chaque section
+let a = 1, b = 1, c = 1, d = 1;
 
+// Modification des événements pour chaque bouton
+document.getElementById("cv_button").addEventListener("click", () => {
+    a = toggleDisplaySection("cv_container", a);
+});
 
-        document.getElementById("about-me").style.display="";
-        document.getElementById("cv_container").style.display="none";
-        document.getElementById("projectwrapper").style.display="none";
-        document.getElementById("contact-section").style.display="none";
-        sidebar.classList.toggle('active');
-        return d=0
+document.getElementById("projects_button").addEventListener("click", () => {
+    b = toggleDisplaySection("projectwrapper", b);
+});
 
-    }
-    else{
-        document.getElementById("about-me").style.display="none";
-        document.getElementById('hero').style.display='';
-        return d=1;
-    }
-}
+document.getElementById("contact_button").addEventListener("click", () => {
+    c = toggleDisplaySection("contact-section", c);
+});
 
-
-
+document.getElementById("about_button").addEventListener("click", () => {
+    d = toggleDisplaySection("about-me", d);
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {

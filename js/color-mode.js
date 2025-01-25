@@ -98,6 +98,14 @@ document.getElementById("about_button").addEventListener("click", () => {
     sidebar.classList.toggle('active');
 });
 
+function isAnySectionVisible() {
+    const sections = ["cv_container", "projectwrapper", "contact-section", "about-me"];
+    return sections.some(id => {
+        const section = document.getElementById(id);
+        return section.style.display !== "none";
+    });
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const sidebarLogo = document.getElementById('btn');
@@ -107,6 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
     heroAnimation.style.backgroundImage = 'var(--tl-1)';
     heroAnimation.style.backgroundPosition = 'center';
     heroAnimation.style.backgroundSize = 'cover';
+
+    if (!isAnySectionVisible()) { // Si une section est déjà affichée, on ne fait rien
+        return;
+    }
 
     let isAnimationRunning = false;
     let originalAnimation = '';

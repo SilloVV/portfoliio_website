@@ -137,8 +137,7 @@ function show_about(){
     if(d==1){
         document.getElementById('hero').style.display='none';
 
-        document.getElementById("imga1").style.display="";
-        document.getElementById("imga2").style.display="";
+
         document.getElementById("about-me").style.display="";
         document.getElementById("cvscroller").style.display="none";
         document.getElementById("projectwrapper").style.display="none";
@@ -148,8 +147,6 @@ function show_about(){
 
     }
     else{
-        document.getElementById("imga1").style.display='none';
-        document.getElementById("imga2").style.display='none';
         document.getElementById("about-me").style.display="none";
         document.getElementById('hero').style.display='';
         return d=1;

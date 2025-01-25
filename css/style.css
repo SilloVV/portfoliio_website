@@ -363,11 +363,10 @@ h1, h2, h5, p{
     top: 5%;
     left: 25%;
     max-height: 85vh;
-     border: 3px solid #ddd;
-     border-radius: 110px;
-      display: flex;
+    border-radius: 110px;
+    display: flex;
      
-     width: 50vw;
+    width: 50vw;
      
 }
 
@@ -463,56 +462,128 @@ h1, h2, h5, p{
     transform: scale(1.1);
 }
 
-#about-me{
-    overflow-y: scroll;
-    overflow-x: hidden;
-    animation: fadeIn 0.3s forwards;
-    position: fixed;
-    bottom:10%;
-    left: 18%;
+/* ABOUT ME */
+
+#about-me {
+    display: flex;
+    flex-direction: row;
+    min-width: 60vw;
+    max-width: 80vw;
+    min-height: 60vh;
     max-height: 80vh;
-    border: 6px solid #989595;
-    font-size: 20px;
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+#about-me .propos_container {
+    border: 3px solid #ddd;
+    border-radius: 2rem;
+    width: 60%;
+    text-align: center;
+    padding: 1rem;
     display: flex;
-    width: 42vw;
-    background-color: var(--bg) ;
-    color: var(--text);
     flex-direction: column;
-    padding-bottom: 50px;
-    border-radius: 20px;
-    padding-left: 10px;
-    text-align: justify;
-    padding-right: 10px;
+    justify-content: center;
+    
 }
 
-#about-me .propos{
-    font-size: 30px;
-    position: relative;
-    left: 30%;
+#about-me .propos_title {
+    font-size: 2rem;
     font-weight: bold;
-    padding-bottom: 40px;
+    margin-bottom: 2rem;
+
+    
 
 }
 
-#imga1{
-    animation: fadeIn 0.3s forwards;
+#about-me .propos_content p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+
+}
+
+#about-me .about_me_images_container{
     display: flex;
-    transform: scale(0.19) rotate(15deg);
-    position:absolute;
-    top: -70%;
-    left: 12%;
-   
+    min-width: 30%;
+    max-width: 50%;
+    border-radius: 2rem;
+    margin-left: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-#imga2{
-    animation: fadeIn 0.3s forwards;
-    display: flex;
-    transform: scale(0.56) rotate(-4deg);
-    position:absolute;
-    top: 22%;
-    left: 63%;
-   
+
+#about-me .about_me_images_high img {
+    border-radius: 2rem;
+    width: 95%;
+    scale: 1.2;
+    border: #ddd 2px solid;
+    position: relative;
+    bottom: 1.5rem;
+    z-index: 1;
+
 }
+
+#about-me .about_me_images_low img {
+    border-radius: 2rem;
+    width: 95%;
+    border: #ddd 2px solid;
+    position: relative;
+    top: 1.5rem;
+    z-index: 2;
+
+}
+
+/* about me small screen */
+/* Media query for small screens */
+@media (max-width: 768px) {
+    #about-me {
+        flex-direction: column;  /* Stack the items vertically on small screens */
+        min-width: 80vw;
+        max-width: 90vw;
+        min-height: 60vh;
+        max-height: 80vh;
+
+    }
+
+    #about-me .propos_container {
+        width: 100%; /* Take full width on small screens */
+        padding: 0.5rem;
+        border: none;
+        
+    }
+
+    #about-me .about_me_images_container {
+        display: none;
+    }
+
+    #about-me .about_me_images_high img, #about-me .about_me_images_low img {
+        display: none;
+    }
+
+    #about-me .propos_title {
+        font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+
+    #about-me .propos_content p {
+        font-size: 1.2rem; /* Reduce text size for better readability on small screens */
+        position: relative;
+        right: 1rem;
+        
+    }
+}
+
+
+
+
+
 
 .circle{
   height: 24px;

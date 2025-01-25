@@ -381,6 +381,67 @@ h1, h2, h5, p{
     scale: 0.3;
 }
 
+/* Adaptation pour les petits écrans */
+@media screen and (max-width: 768px) {
+    #cv_container {
+        min-width: 80vw; /* Augmenter la largeur sur les petits écrans */
+        max-width: 90vw; /* Augmenter la largeur sur les petits écrans */
+        top: 10%; /* Ajuster la position sur les petits écrans */
+        left: 5%; /* Ajuster la position sur les petits écrans */
+        padding: 1rem; /* Réduire le padding sur les petits écrans */
+    }
+
+    #closeb {
+        bottom: 25rem; /* Réduire la distance du bouton de fermeture */
+        left: 35rem; /* Ajuster la position du bouton */
+        scale: 0.3; /* Reduire la taille du bouton de fermeture */
+    }
+
+    #cvscroller {
+        border-radius: 1.5rem; /* Réduire le rayon de bordure */
+    }
+
+    #cvscroller .cv {
+        border: 3px solid #ddd; /* Réduire la taille du bord */
+    }
+
+    #cvscroller .cv-content img {
+        width: 100%; /* S'assurer que les images sont responsives */
+        height: auto;
+    }
+
+    /* Optionnel : modification de la barre de défilement */
+    #cvscroller::-webkit-scrollbar {
+        width: 4px; /* Plus petite barre de défilement */
+    }
+}
+
+/* Adaptation pour très petits écrans (ex : smartphones) */
+@media screen and (max-width: 480px) {
+    #cv_container {
+        min-width: 90vw; /* Prendre presque toute la largeur sur les très petits écrans */
+        max-width: 95vw; /* Ajuster la largeur */
+        top: 5%; /* Ajuster la position */
+        left: 2%; /* Ajuster la position */
+    }
+
+    #closeb {
+       display: none; 
+    }
+
+    #cvscroller {
+        border-radius: 1rem; /* Réduire le rayon de bordure */
+    }
+
+    #cvscroller .cv {
+        border: 2px solid #ddd; /* Réduire le bord */
+    }
+
+    #cvscroller .cv-content img {
+        width: 100%; /* S'assurer que les images sont responsives */
+        height: auto;
+    }
+}
 /* PROJECTS */
 #projectwrapper{
     
@@ -494,6 +555,67 @@ h1, h2, h5, p{
 
 .contact-icon img:hover{
     transform: scale(1.1);
+}
+
+
+/* Adaptation pour les petits écrans (moins de 768px) */
+@media screen and (max-width: 768px) {
+    #contact-section {
+        width: 80vw; /* Prendre plus de largeur sur les petits écrans */
+        left: 10%; /* Déplacer légèrement le conteneur */
+        bottom: 10%; /* Repositionner la section */
+        max-height: 70vh; /* Réduire la hauteur sur les petits écrans */
+    }
+
+    .contact-me {
+        font-size: 20px; /* Réduire la taille de la police */
+        margin-bottom: 10px;
+    }
+
+    .contact-icon {
+        width: 15%; /* Augmenter la largeur des icônes */
+        margin: 10px; /* Réduire l'espace entre les icônes */
+    }
+
+    #gitlab_logo {
+        width: 80%; /* Ajuster la taille du logo */
+        border-radius: 1.5rem; /* Réduire le rayon de bordure */
+    }
+
+    .mail {
+        font-size: 18px; /* Réduire la taille du texte */
+    }
+}
+
+/* Adaptation pour les très petits écrans (moins de 480px) */
+@media screen and (max-width: 480px) {
+    #contact-section {
+        width: 90vw; /* Prendre presque toute la largeur de l'écran */
+        left: 5%; /* Réduire l'écart de gauche */
+        bottom: 50%; /* Réduire l'espace en bas */
+        max-height: 60vh; /* Réduire la hauteur pour s'adapter */
+        
+    }
+
+
+    .contact-me {
+        font-size: 20px; /* Réduire encore la taille de la police */
+        margin-bottom: 5px;
+    }
+
+    .contact-icon {
+        width: 30%; /* Augmenter la taille des icônes */
+        margin: 5px; /* Espacement plus serré entre les icônes */
+    }
+
+    #gitlab_logo {
+        width: 100%; /* Réduire légèrement la taille du logo */
+        border-radius: 1.2rem; /* Plus petit rayon de bordure */
+    }
+
+    .mail {
+        font-size: 18px; /* Réduire la taille du texte */
+    }
 }
 
 /* ABOUT ME */
@@ -691,27 +813,20 @@ h1, h2, h5, p{
 
 @media screen and (max-width:700px)  {
     .sidebar.active .top .logo{
-        transform: translate(0Vw);
+        transform: translate(40Vw);
     }
     
-    #cvscroller{
-        max-height: 100vh;
-        
-        margin-left: 0px;
-        margin-top: 2vh;
-        border: none;}
-    .cv{
-        
-        max-width: 100vw;
-        height: 100vh;
+    .sidebar.active ul{
+        padding:0;
     }
-    .cv img {
-        margin-bottom: 10vh;
-        width: 100vw;
-        height: 95vh;
+    
+    .sidebar.active {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 1;
     }
-
- 
 
     .mail {
         font-size: 16px;
@@ -720,19 +835,6 @@ h1, h2, h5, p{
         padding-bottom: 10px;
     }
 
-    .contact-icon {
-        width: 14%;
-        margin: 0 20px;
-    }
-    
-    .contact-icon img {
-        border: none;
-        width: 100%;
-        height: auto;
-    }
-    .contact-me {
-        margin-bottom: 10px;
-    }
 
     #about-me{
         

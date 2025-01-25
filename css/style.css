@@ -41,22 +41,20 @@ h1, h2, h5, p{
 
 #hero_animation{
     margin-left: 10px;
-    height: 21rem;
-    width: 21rem;
+    height: 20rem;
+    width: 20rem;
     max-height: 100Vh;
     max-width: 100Vh;
     
 }
 
-#hero__animation__img{
+#hero_animation_img{
     margin-top: 8px;
-    background-image: var(--tl-1);
-    height: 110%;
-    transition: 60ms;
     background-position: center;
     background-size: cover;
-    
-    
+    height: 100%;
+    width: 100%;
+
 }
 
 #top-left-img{
@@ -371,19 +369,9 @@ h1, h2, h5, p{
 
 } 
 
-#closeb {
-    position: absolute;
-    scale: 0.2;
-    bottom: 31.2rem;
-    left : 44rem;
-    cursor: pointer;
-    z-index: 1000;
-    
-}
 
-#closeb:hover {
-    scale: 0.3;
-}
+
+
 
 /* Adaptation pour les petits écrans */
 @media screen and (max-width: 768px) {
@@ -395,11 +383,7 @@ h1, h2, h5, p{
         padding: 1rem; /* Réduire le padding sur les petits écrans */
     }
 
-    #closeb {
-        bottom: 25rem; /* Réduire la distance du bouton de fermeture */
-        left: 35rem; /* Ajuster la position du bouton */
-        scale: 0.3; /* Reduire la taille du bouton de fermeture */
-    }
+  
 
     #cvscroller {
         border-radius: 1.5rem; /* Réduire le rayon de bordure */
@@ -429,9 +413,7 @@ h1, h2, h5, p{
         left: 2%; /* Ajuster la position */
     }
 
-    #closeb {
-       display: none; 
-    }
+    
 
     #cvscroller {
         border-radius: 1rem; /* Réduire le rayon de bordure */

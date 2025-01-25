@@ -107,58 +107,40 @@ document.getElementById("about_button").addEventListener("click", () => {
 document.addEventListener('DOMContentLoaded', () => {
     const sidebarLogo = document.getElementById('btn');
     const heroAnimation = document.getElementById('hero_animation');
-    const heroAnimationImg = document.getElementById('hero__animation__img');
+    const heroAnimationImg = document.getElementById('hero_animation_img');
 
     let isAnimationRunning = false;
     let originalAnimation = '';
-
     sidebarLogo.addEventListener('click', () => {
         if (!isAnimationRunning) {
+            // Sauvegarde l'animation originale
             originalAnimation = heroAnimation.style.animation;
-
+    
             // Nouvelle animation
-            heroAnimation.style.height = '22rem';
-            heroAnimation.style.width = '22rem';
+            heroAnimation.style.height = '20rem';
+            heroAnimation.style.width = '20rem';
             heroAnimation.style.backgroundPosition = 'center';
             heroAnimation.style.backgroundSize = 'cover';
-            heroAnimationImg.style.display = 'none';
-            heroAnimation.style.animation = 'top-left 0.4s ';
+            heroAnimation.style.animation = 'top-left 0.4s';
+            heroAnimation.style.backgroundImage = 'var(--tl-4)'; // Change directement l'image de fond
+    
+            isAnimationRunning = true;
+        } else {
+            // Rétablir l'animation et l'image d'origine
+            heroAnimation.style.animation = 'reverse-top-left 0.4s';
             setTimeout(() => {
-                
                 heroAnimation.style.height = '20rem';
                 heroAnimation.style.width = '20rem';
                 heroAnimation.style.backgroundPosition = 'center';
                 heroAnimation.style.backgroundSize = 'cover';
-                heroAnimationImg.style.backgroundImage= 'var(--tl-4)'; 
-                heroAnimationImg.style.display = '';
-                }, 400);
-            
-
-        
-            
-                
-            isAnimationRunning = true;
-        } else {
-            // Annuler l'animation
-            heroAnimation.style.animation = originalAnimation;
-            heroAnimationImg.style.display='none';
-            heroAnimationImg.style.backgroundImage= 'var(--tl-1)';
-            heroAnimation.style.animation = 'reverse-top-left 0.4s';
-            // Rétablir l'affichage de l'image après l'annulation de l'animation
-            setTimeout(() => {
-            heroAnimation.style.height = '22rem';
-            heroAnimation.style.width = '22rem';
-            heroAnimation.style.backgroundPosition = 'center';
-            heroAnimation.style.backgroundSize = 'cover';
-            heroAnimationImg.style.display = '';
-            }, 400); // Vous pouvez ajuster cette valeur selon vos besoins
-            
+                heroAnimation.style.backgroundImage = 'var(--tl-1)'; // Restaure l'image initiale
+            }, 400);
+    
             isAnimationRunning = false;
         }
     });
 });
-
-
+    
 
 //Mouse animation 
 const coords = { x: 0, y: 0 };
@@ -205,6 +187,4 @@ function animateCircles() {
 
 animateCircles();
 
-
-//handle project 
 

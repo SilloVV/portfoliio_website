@@ -27,11 +27,13 @@ function saveColorMode(){
     updateToggleButton();
 }
 
+
 function updateToggleButton(){
     if(root.classList.contains("dark-mode")){
         toggleButton.style.backgroundImage = "var(--moon)";
         document.getElementById("nom").style.display="none";
         document.getElementById("sillow").style.display="";
+        
     }else{
         toggleButton.style.backgroundImage = "var(--sun)";
         document.getElementById("nom").style.display="";
@@ -108,17 +110,20 @@ function isAnySectionVisible() {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    loadColorMode();
     const sidebarLogo = document.getElementById('btn');
     const heroAnimation = document.getElementById('hero_animation');
+
+    
 
     // Définir une image de fond par défaut
     heroAnimation.style.backgroundImage = 'var(--tl-1)';
     heroAnimation.style.backgroundPosition = 'center';
     heroAnimation.style.backgroundSize = 'cover';
 
-    if (!isAnySectionVisible()) { // Si une section est déjà affichée, on ne fait rien
-        return;
-    }
+    
+
+   
 
     let isAnimationRunning = false;
     let originalAnimation = '';
@@ -150,6 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
             isAnimationRunning = false;
         }
     });
+    if (!isAnySectionVisible()) { //   Si aucune section n'est visible, on affiche 'hero'
+        return;
+    }
 });
     
 

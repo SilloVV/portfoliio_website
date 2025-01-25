@@ -80,18 +80,22 @@ let a = 1, b = 1, c = 1, d = 1;
 // Modification des événements pour chaque bouton
 document.getElementById("cv_button").addEventListener("click", () => {
     a = toggleDisplaySection("cv_container", a);
+    sidebar.classList.toggle('active');
 });
 
 document.getElementById("projects_button").addEventListener("click", () => {
     b = toggleDisplaySection("projectwrapper", b);
+    sidebar.classList.toggle('active');
 });
 
 document.getElementById("contact_button").addEventListener("click", () => {
     c = toggleDisplaySection("contact-section", c);
+    sidebar.classList.toggle('active');
 });
 
 document.getElementById("about_button").addEventListener("click", () => {
     d = toggleDisplaySection("about-me", d);
+    sidebar.classList.toggle('active');
 });
 
 

@@ -50,10 +50,8 @@ function show_cv(){
     if(a==1){
         document.getElementById('hero').style.display='none';
 
-        document.getElementById("cvscroller").style.display="";
+        document.getElementById("cv_container").style.display="";
         document.getElementById("contact-section").style.display="none";
-        document.getElementById("imga1").style.display='none';
-        document.getElementById("imga2").style.display='none';
         document.getElementById("about-me").style.display="none";
         document.getElementById("projectwrapper").style.display="none";
 
@@ -63,7 +61,7 @@ function show_cv(){
     }
     else{
         
-        document.getElementById("cvscroller").style.display="none";
+        document.getElementById("cv_container").style.display="none";
         document.getElementById('hero').style.display='';
 
         return a=1;
@@ -71,11 +69,11 @@ function show_cv(){
 }
 
 function close_cv() {
-    const cvscroller = document.getElementById("cvscroller");
+    const cv_container = document.getElementById("cv_container");
     document.getElementById('hero').style.display='';
 
 
-    cvscroller.style.display = "none";
+    cv_container.style.display = "none";
     
     a = 1;
 }
@@ -94,9 +92,8 @@ function show_projects(){
 
         document.getElementById("projectwrapper").style.display="";
         document.getElementById("contact-section").style.display="none";
-        document.getElementById("cvscroller").style.display="none";
-        document.getElementById("imga1").style.display='none';
-        document.getElementById("imga2").style.display='none';
+        document.getElementById("cv_container").style.display="none";
+
         document.getElementById("about-me").style.display="none";
         sidebar.classList.toggle('active');
         return b=0
@@ -115,9 +112,7 @@ function show_contact(){
     if(c==1){
         document.getElementById('hero').style.display='none';
         document.getElementById("contact-section").style.display="";
-        document.getElementById("cvscroller").style.display="none";
-        document.getElementById("imga1").style.display='none';
-        document.getElementById("imga2").style.display='none';
+        document.getElementById("cv_container").style.display="none";
         document.getElementById("about-me").style.display="none";
         document.getElementById("projectwrapper").style.display="none";
         sidebar.classList.toggle('active');
@@ -139,7 +134,7 @@ function show_about(){
 
 
         document.getElementById("about-me").style.display="";
-        document.getElementById("cvscroller").style.display="none";
+        document.getElementById("cv_container").style.display="none";
         document.getElementById("projectwrapper").style.display="none";
         document.getElementById("contact-section").style.display="none";
         sidebar.classList.toggle('active');

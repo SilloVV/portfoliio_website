@@ -311,51 +311,76 @@ h1, h2, h5, p{
 }
 
 
+/* CV SCROLLER */
 
-#cvscroller{
+
+#cv_container{
+    min-width: 50vw;
+    max-width: 60vw;
+    min-height: 80vh;
+    max-height: 80vh;
     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    border: 1px solid #323;
-    display: flex;
-    flex-direction: column;
+    padding: 2rem;
+    top: 5%;
+    left: 20%;
     overflow-y: auto;
-    margin-left: 25%;
-    animation: fadeIn 1s forwards;
-    margin-bottom: 10;
+
+    overflow-x: hidden;
+
+}
+#cvscroller{
+    width: 100%;
+    height: 100%;   
+    border-radius: 2rem;   
+}
+
+#cvscroller::-webkit-scrollbar {
+    width: 6px; /* Largeur de la barre */
+}
+
+/* Personnalise le "thumb" (partie déplaçable de la barre de défilement) */
+#cvscroller::-webkit-scrollbar-thumb {
+    border-radius: 15px; /* Bord arrondi */
+}
+
+#cvscroller::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Changement de couleur lorsque l'utilisateur survole */
+}
+#cvscroller .cv{
+    position: relative;
+    top: 2rem;
+    border: 5px solid #ddd;
+    border-radius: 2.3rem;
+}
+#cvscroller .cv-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 2rem;
     
 }
 
-#cvscroller::-webkit-scrollbar{
-    width: 0;
-}
-.cv{
-    max-width: 50vw;
-    line-height: 0vh;
-    text-align: center;
-    max-height: 200vh;
-    margin-top: -35px;
-}
+ #cvscroller .cv-content img {
+    border-radius: 2rem;
 
- .cv img {
-    width: 100%;
-    height: 100%;
 } 
 
 #closeb {
     position: absolute;
-    top: 25px;
-    right: 35px;
+    scale: 0.2;
+    bottom: 31.2rem;
+    left : 44rem;
     cursor: pointer;
-    font-size: 24px;
-    color: #333;
+    z-index: 1000;
+    
 }
 
 #closeb:hover {
-    color: red; /* Couleur de la croix lorsqu'on survole */
+    scale: 0.3;
 }
 
+/* PROJECTS */
 #projectwrapper{
     
     animation: fadeIn 0.3s forwards;
@@ -407,11 +432,12 @@ h1, h2, h5, p{
     width:10%;
 }
 
+/* section contact */
 
 #contact-section {
     animation: fadeIn 0.3s forwards;
     position: fixed;
-    bottom:40%;
+    bottom:70%;
     left: 30%;
     max-height: 80vh;
     border: 3px solid #ddd;
@@ -451,6 +477,13 @@ h1, h2, h5, p{
     width: 100%;
     height: auto;
 }
+
+#gitlab_logo {
+    width: 100%;
+    height: auto;
+    border-radius: 1.9rem;
+}
+
 
 .mail {
     font-size: 20px;
@@ -523,22 +556,30 @@ h1, h2, h5, p{
 #about-me .about_me_images_high img {
     border-radius: 2rem;
     width: 95%;
-    scale: 1.2;
-    border: #ddd 2px solid;
+    scale: 1.3;
     position: relative;
-    bottom: 1.5rem;
-    z-index: 1;
+    top: 0.3rem;
+    z-index: 0;
 
 }
 
 #about-me .about_me_images_low img {
+    background-color: whitesmoke;
     border-radius: 2rem;
     width: 95%;
     border: #ddd 2px solid;
     position: relative;
     top: 1.5rem;
-    z-index: 2;
+    z-index: 1;
+}
 
+#about-me .hat{
+    position: absolute;
+    bottom: 5.4rem;
+    left:66vw;
+    scale:0.3;
+    z-index: 2;
+    rotate: 0.06turn;
 }
 
 /* about me small screen */
@@ -668,13 +709,9 @@ h1, h2, h5, p{
         width: 100vw;
         height: 95vh;
     }
-    #contact-section {
-        
-        width: 80vw;
-        position: fixed;
-        bottom:40%;
-        left: 10%;
-    }
+
+ 
+
     .mail {
         font-size: 16px;
         font-weight: bold;
@@ -719,18 +756,7 @@ h1, h2, h5, p{
         padding-right: 10px;
     }
     
-    #about-me .propos{
-        padding-top: 25px;
-        font-size: 22px;
-        left: 20%;
-    }
-    #imga2{
-        display: none;
-    }
 
-    #imga1{
-       display:none;
-    }
 
     .project{
         display: none;

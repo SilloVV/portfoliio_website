@@ -139,9 +139,10 @@ h1, h2, h5, p{
     position: relative;
     list-style-type: none;
     height: 50px;
-    width: 90px;
+    width: 95px;
     margin: 0.8rem auto;
     line-height: 50px;
+    
 }
 
 #btn{
@@ -154,10 +155,10 @@ h1, h2, h5, p{
     align-items: center;
     text-decoration: none;
     border-radius: 0.8rem;
+    justify-content: center;
 }
 
 .sidebar.active ul li a:hover{
-    padding-left: 5px;
     background-color:var(--bg-alt);
     color: var(--bg);
     

@@ -1,2 +1,16 @@
 # The Docker image that will be used to build your app
 image: portfolio:wass
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - mkdir public
+    - cp -r * public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

@@ -9,10 +9,10 @@ pages:
   script:
     - echo "Deploying to /public"
     - ls
-    - cp -r assets/* public/assets/
-    - cd public/
+    - cp -r assets/. public/assets/.
+    - cd public/.
     - ls
-    - cd assets/
+    - cd assets/.
     - ls -l
     - cd
     

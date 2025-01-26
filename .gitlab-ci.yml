@@ -1,5 +1,5 @@
 # The Docker image that will be used to build your app
-image: alpine:latest
+image: nginx:latest
 
 stages:
   - deploy

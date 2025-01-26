@@ -1,20 +1,20 @@
-# The Docker image that will be used to build your app
-image: alpine:latest
+image: nginx:alpine
 
 stages:
   - deploy
 
 pages:
   stage: deploy
+
   script:
-    - echo "copying unused files"
-    - mkdir -p /usr/share/nginx/html 
-    - cp -r public/ /usr/share/nginx/hmtl
-    - echo "Deploying to /public"
-    - cd /usr/share/nginx/hmtl
-    - ls -la
+    - echo "Avant la copie :"
+    - ls -la  # Liste tous les fichiers dans le répertoire courant
+    - mkdir -p public  # Crée le répertoire public si nécessaire
+    - cp -r ./* public/  # Copie tous les fichiers dans le répertoire public
+    - echo "Après la copie :"
+    - ls -la public  # Liste les fichiers dans le répertoire public
   artifacts:
     paths:
-      - public
+      - public  # Publie le répertoire public via GitLab Pages
   only:
     - main

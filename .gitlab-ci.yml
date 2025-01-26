@@ -7,12 +7,8 @@ pages:
   stage: deploy
 
   script:
-    - echo "Avant la copie :"
-    - ls -la  # Liste tous les fichiers dans le répertoire courant
-    - mkdir -p public  # Crée le répertoire public si nécessaire
-    - cp -r ./* public/  # Copie tous les fichiers dans le répertoire public
-    - echo "Après la copie :"
-    - ls -la public  # Liste les fichiers dans le répertoire public
+    - echo "Deploy"
+    - cd public/
   artifacts:
     paths:
       - public/*  # Publie le répertoire public via GitLab Pages

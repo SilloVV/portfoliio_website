@@ -122,7 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
     heroAnimation.style.backgroundSize = 'cover';
 
     
-
    
 
     let isAnimationRunning = false;

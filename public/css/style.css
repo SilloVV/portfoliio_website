@@ -695,14 +695,7 @@ h1, h2, h5, p{
     z-index: 1;
 }
 
-#about-me .hat{
-    position: absolute;
-    bottom: 7rem;
-    left:54vw;
-    scale:0.3;
-    z-index: 2;
-    rotate: 0.06turn;
-}
+
 
 /* about me small screen */
 /* Media query for small screens */

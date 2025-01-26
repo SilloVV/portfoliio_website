@@ -7,11 +7,9 @@ stages:
 pages:
   stage: deploy
   script:
-    - cp -r public/* /home
-    - echo "Deployed to /home"
-    - ls -la /home
+    - echo "Deploying to /public"
     - ls
-    - cd /home/public
+    - cd /public
     
   artifacts:
     paths:

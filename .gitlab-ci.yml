@@ -15,6 +15,6 @@ pages:
     - ls -la public  # Liste les fichiers dans le répertoire public
   artifacts:
     paths:
-      - public  # Publie le répertoire public via GitLab Pages
+      - public/*  # Publie le répertoire public via GitLab Pages
   only:
     - main

@@ -6,8 +6,6 @@ stages:
 
 pages:
   stage: deploy
-  script:
-    - cp -r * public/
   artifacts:
     paths:
       - public

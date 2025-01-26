@@ -8,9 +8,10 @@ pages:
   stage: deploy
   script:
     - echo "copying unused files"
-    - cp -r public/ public/html/
+    - mkdir -p /usr/share/nginx/html 
+    - cp -r public/ /usr/share/nginx/hmtl
     - echo "Deploying to /public"
-    - cd public/html
+    - cd /usr/share/nginx/hmtl
     - ls -la
   artifacts:
     paths:

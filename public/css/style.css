@@ -250,13 +250,13 @@ h1, h2, h5, p{
     
 
     /* face animation */
-    --tl-1: url(../../public/assets/face-animation-light/tl1.png);
-    --tl-2: url(../../public/assets/face-animation-light/tl2.png);
-    --tl-3: url(../../public/assets/face-animation-light/tl4.png);
-    --tl-4: url(../../public/assets/face-animation-light/tl3.png);
+    --tl-1: url(./assets/face-animation-light/tl1.png);
+    --tl-2: url(./assets/face-animation-light/tl2.png);
+    --tl-3: url(./assets/face-animation-light/tl4.png);
+    --tl-4: url(.assets/face-animation-light/tl3.png);
     
 
-    --sun:url(../../public/assets/icons/power-on.png);
+    --sun:url(.assets/icons/power-on.png);
 }
 
 /* DARK MODE */
@@ -273,12 +273,12 @@ h1, h2, h5, p{
     
 
     /* face animation */
-    --tl-1: url(../../public/assets/face-animation-dark/fond.png);
-    --tl-2: url(../../public/assets/face-animation-dark/fond.png);
-    --tl-3: url(../../public/assets/face-animation-dark/fond.png);
-    --tl-4: url(../../public/assets/face-animation-dark/fond.png);
+    --tl-1: url(./assets/face-animation-dark/fond.png);
+    --tl-2: url(./assets/face-animation-dark/fond.png);
+    --tl-3: url(./assets/face-animation-dark/fond.png);
+    --tl-4: url(./assets/face-animation-dark/fond.png);
 
-    --moon:url(../../public/assets/icons/green-love.png);
+    --moon:url(./assets/icons/green-love.png);
     
 }
 

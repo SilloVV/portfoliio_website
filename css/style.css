@@ -488,7 +488,7 @@ h1, h2, h5, p{
     bottom:70%;
     left: 30%;
     max-height: 80vh;
-    border: 3px solid #ddd;
+    border: 3px solid black;
     border-radius: 30px;
     display: flex;
     width: 40vw;
@@ -499,7 +499,6 @@ h1, h2, h5, p{
     height: 100%;
     border-radius: 30px;
     text-align: center;
-    background-image:linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
     opacity: 0.95;
     margin: 4px;
     display: flex;
@@ -530,6 +529,7 @@ h1, h2, h5, p{
     width: 100%;
     height: auto;
     border-radius: 1.9rem;
+    border: #f78d30 4px solid;
 }
 
 
@@ -548,19 +548,27 @@ h1, h2, h5, p{
 @media screen and (max-width: 768px) {
     #contact-section {
         width: 80vw; /* Prendre plus de largeur sur les petits écrans */
-        left: 10%; /* Déplacer légèrement le conteneur */
-        bottom: 10%; /* Repositionner la section */
-        max-height: 70vh; /* Réduire la hauteur sur les petits écrans */
+        max-height: 80vh; /* Réduire la hauteur sur les petits écrans */
+        
     }
 
     .contact-me {
-        font-size: 20px; /* Réduire la taille de la police */
+        font-size: 3rem; /* Réduire la taille de la police */
         margin-bottom: 10px;
+
+    }
+
+    #contact-section .contact-content{
+        flex-direction: column;
+        
+        align-items: center;
     }
 
     .contact-icon {
         width: 15%; /* Augmenter la largeur des icônes */
         margin: 10px; /* Réduire l'espace entre les icônes */
+
+        
     }
 
     #gitlab_logo {
@@ -569,7 +577,7 @@ h1, h2, h5, p{
     }
 
     .mail {
-        font-size: 18px; /* Réduire la taille du texte */
+        font-size: 1.7rem; /* Réduire la taille du texte */
     }
 }
 
@@ -578,15 +586,21 @@ h1, h2, h5, p{
     #contact-section {
         width: 90vw; /* Prendre presque toute la largeur de l'écran */
         left: 5%; /* Réduire l'écart de gauche */
-        bottom: 50%; /* Réduire l'espace en bas */
-        max-height: 60vh; /* Réduire la hauteur pour s'adapter */
+        bottom: 25%; /* Réduire l'espace en bas */
+        max-height: 70vh; /* Réduire la hauteur pour s'adapter */
         
+    }
+
+    #contact-section .contact-content{
+        flex-direction: column;
+        
+        align-items: center;
     }
 
 
     .contact-me {
-        font-size: 20px; /* Réduire encore la taille de la police */
-        margin-bottom: 5px;
+        font-size: 1.6rem; /* Réduire encore la taille de la police */
+        margin-bottom: 10px;
     }
 
     .contact-icon {
@@ -600,7 +614,7 @@ h1, h2, h5, p{
     }
 
     .mail {
-        font-size: 18px; /* Réduire la taille du texte */
+        font-size: 1.4rem; /* Réduire la taille du texte */
     }
 }
 
@@ -773,12 +787,7 @@ h1, h2, h5, p{
         opacity: 1;
     }
 
-    .mail {
-        font-size: 16px;
-        font-weight: bold;
-        width: 100%;
-        padding-bottom: 10px;
-    }
+   
 
 
     #about-me{

@@ -8,7 +8,7 @@ pages:
   stage: deploy
   script:
     - echo "copying unused files"
-    - cp -r /public /public/html
+    - cp -r public/ public/html/
     - echo "Deploying to /public"
     - cd public/html
     - ls -la

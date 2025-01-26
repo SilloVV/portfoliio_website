@@ -9,7 +9,7 @@ pages:
   script:
     - echo "Deploying to /public"
     - ls
-    - cd /public
+    - cd public/
     
   artifacts:
     paths:

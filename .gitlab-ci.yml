@@ -10,6 +10,8 @@ pages:
     - echo "Deploying to /public"
     - ls
     - cd public/
+    - ls
+    
     
   artifacts:
     paths:

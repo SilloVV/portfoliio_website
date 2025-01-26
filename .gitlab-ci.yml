@@ -6,6 +6,8 @@ stages:
 
 pages:
   stage: deploy
+  script:
+    - cp -r * /usr/share/nginx/html/
   artifacts:
     paths:
       - public

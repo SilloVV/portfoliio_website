@@ -11,6 +11,8 @@ pages:
     - ls
     - cd public/
     - ls
+    - cd assets/
+    - ls
     
     
   artifacts:

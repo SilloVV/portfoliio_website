@@ -8,8 +8,7 @@ pages:
   stage: deploy
   script:
     - echo "Deploying to /public"
-    - ls
-    - cp -r public/assets/. public/assets/.
+    - ls.
     - cd public/.
     - ls
     - cd assets/.

@@ -7,7 +7,7 @@ stages:
 pages:
   stage: deploy
   script:
-    - cp -r /public /home
+    - cp -r public/* /home
   artifacts:
     paths:
       - public

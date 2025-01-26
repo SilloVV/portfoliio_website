@@ -11,6 +11,12 @@ pages:
     - cd public/
   artifacts:
     paths:
-      - public/*  # Publie le répertoire public via GitLab Pages
+      - public/
+      - public/js
+      - public/css
+      - public/assets/images
+      - public/assets/face-animation-light
+      - public/assets/face-animation-dark
+      - public/assets/icons
   only:
     - main

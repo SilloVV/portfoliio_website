@@ -8,14 +8,7 @@ pages:
   stage: deploy
   script:
     - echo "Deploying to /public"
-    - ls.
-    - cd public/.
-    - ls
-    - cd assets/.
-    - ls -l
-    - cd
-    
-    
+    - cd public/.  
   artifacts:
     paths:
       - public
